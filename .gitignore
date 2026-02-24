@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Node / frontend build
+node_modules/
+dist/
+frontend/node_modules/
+frontend/dist/
+
+# Logs / runtime outputs
+logs/
+*.log
+*.jsonl
+*.pid
+
+# Model weights and ML artifacts
+models/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+*.h5
+*.pb
+
+# Caches
+.cache/
+**/.cache/
+hf_cache/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Project-private orchestration files
+AGENTS.md
+agents_2.md
+tasks/
+
+# Project outputs
+evaluation/results/
