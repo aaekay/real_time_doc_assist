@@ -1,0 +1,163 @@
+{
+  "id": "ent_sore_throat_010",
+  "specialty": "ENT (Otolaryngology)",
+  "title": "Severe Sore Throat with Dysphagia and Trismus in a Young Female",
+  "dialogue": [
+    {
+      "speaker": "doctor",
+      "text": "Hi, Ms. Kim. I can see you're in quite a bit of discomfort. Can you tell me about your sore throat?"
+    },
+    {
+      "speaker": "patient",
+      "text": "It started four days ago as a normal sore throat. I figured it was just a cold. But it's gotten so much worse. The pain is now mainly on the left side and it's unbearable. I can barely swallow my own saliva, let alone eat or drink anything. I've only had a few sips of water today."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Have you had any fever? And have you noticed any changes in your voice or difficulty opening your mouth?"
+    },
+    {
+      "speaker": "patient",
+      "text": "I've had a high fever, 102 to 103, for the past two days that Tylenol barely touches. My voice sounds muffled, like I'm talking with a hot potato in my mouth, my friends say. And I can barely open my mouth. I can only get about one finger width open before it's too painful. It's been getting harder to open over the past day."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Are you drooling at all, or having any difficulty breathing? And has the pain been radiating to your ear?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Yes, I've been drooling because it hurts too much to swallow. I keep a towel with me. I'm not having trouble breathing exactly, but I do feel like there's something swollen in my throat on the left side and sometimes I feel like the air passage is smaller. The pain shoots up to my left ear. I also noticed a couple of large, tender lumps on the left side of my neck."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Have you had any recent dental problems, tonsil infections, or similar episodes before? Are you on any medications or have any medical conditions?"
+    },
+    {
+      "speaker": "patient",
+      "text": "I've had strep throat a few times growing up, and I had a really bad tonsil infection about eight months ago where they gave me antibiotics. I don't have any other medical conditions and I'm not on any medications. I don't smoke but I do vape occasionally. I haven't seen a dentist in about two years, and I think I might have a cavity on the lower left side."
+    }
+  ],
+  "gold_standard_questions": [
+    {
+      "question": "When did the sore throat start, and how has it progressed?",
+      "domain": "symptom_timeline",
+      "priority": "high"
+    },
+    {
+      "question": "Is the pain predominantly on one side of the throat?",
+      "domain": "symptom_characterization",
+      "priority": "critical"
+    },
+    {
+      "question": "Are you having difficulty swallowing, and can you tolerate liquids, solids, or neither?",
+      "domain": "dysphagia_assessment",
+      "priority": "critical"
+    },
+    {
+      "question": "Are you able to open your mouth fully, and if not, how limited is the opening?",
+      "domain": "trismus_assessment",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you been drooling or unable to manage your secretions?",
+      "domain": "airway_assessment",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you noticed any changes in your voice, such as a muffled or 'hot potato' quality?",
+      "domain": "voice_changes",
+      "priority": "high"
+    },
+    {
+      "question": "Are you having any difficulty breathing or feeling that your airway is compromised?",
+      "domain": "airway_assessment",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you had a fever, and how high has it been?",
+      "domain": "infection_signs",
+      "priority": "high"
+    },
+    {
+      "question": "Do you have any swollen or tender lymph nodes in your neck?",
+      "domain": "lymphadenopathy",
+      "priority": "high"
+    },
+    {
+      "question": "Does the throat pain radiate to your ear?",
+      "domain": "referred_pain",
+      "priority": "medium"
+    },
+    {
+      "question": "Have you had recurrent episodes of tonsillitis or peritonsillar abscess in the past?",
+      "domain": "medical_history",
+      "priority": "high"
+    },
+    {
+      "question": "Have you had any recent dental problems or dental infections?",
+      "domain": "dental_history",
+      "priority": "high"
+    },
+    {
+      "question": "Are you able to stay hydrated, and when did you last eat or drink?",
+      "domain": "hydration_status",
+      "priority": "high"
+    },
+    {
+      "question": "Have you taken any antibiotics for this illness, and if so, have they helped?",
+      "domain": "treatment_history",
+      "priority": "medium"
+    },
+    {
+      "question": "Do you use tobacco, vape, or consume alcohol?",
+      "domain": "social_history",
+      "priority": "medium"
+    }
+  ],
+  "red_flag_questions": [
+    {
+      "question": "Are you having significant difficulty opening your mouth (trismus)?",
+      "domain": "peritonsillar_abscess",
+      "reason": "Trismus (limited jaw opening) in the setting of a severe unilateral sore throat is a classic sign of peritonsillar abscess. The abscess irritates and inflames the pterygoid muscles, limiting mouth opening. This finding strongly suggests an abscess that requires drainage."
+    },
+    {
+      "question": "Are you drooling or unable to swallow your own saliva?",
+      "domain": "airway_compromise",
+      "reason": "Inability to swallow secretions indicates severe pharyngeal swelling or abscess that could be encroaching on the airway. This is a sign of potential airway compromise and requires urgent ENT evaluation and possible intervention to prevent complete obstruction."
+    },
+    {
+      "question": "Has your voice become muffled or changed in quality?",
+      "domain": "deep_space_infection",
+      "reason": "A muffled, 'hot potato' voice indicates significant swelling of the oropharyngeal tissues, consistent with peritonsillar or parapharyngeal abscess. This swelling can progress to airway obstruction and indicates the need for urgent drainage and IV antibiotics."
+    },
+    {
+      "question": "Do you feel that your airway is becoming smaller or that it is getting harder to breathe?",
+      "domain": "impending_airway_obstruction",
+      "reason": "Any sensation of airway narrowing in the setting of a deep neck space infection is a warning sign of impending airway obstruction, which is a life-threatening emergency. These patients require immediate ENT evaluation with preparation for emergent airway management."
+    },
+    {
+      "question": "Is the swelling and pain predominantly on one side of your throat?",
+      "domain": "abscess_lateralization",
+      "reason": "Unilateral throat pain and swelling in the context of trismus, drooling, and voice change is the hallmark presentation of peritonsillar abscess, the most common deep space infection of the head and neck. Failure to diagnose and drain a peritonsillar abscess can lead to spread to the parapharyngeal or retropharyngeal space, with risk of mediastinitis, airway compromise, or internal jugular vein thrombosis (Lemierre syndrome)."
+    }
+  ],
+  "expected_domains": [
+    "symptom_timeline",
+    "symptom_characterization",
+    "dysphagia_assessment",
+    "trismus_assessment",
+    "airway_assessment",
+    "voice_changes",
+    "infection_signs",
+    "lymphadenopathy",
+    "medical_history",
+    "dental_history",
+    "hydration_status",
+    "treatment_history",
+    "social_history"
+  ],
+  "expected_consult": {
+    "specialty": "ENT (Otolaryngology)",
+    "urgency": "urgent",
+    "reasoning": "A 22-year-old female with progressive unilateral sore throat, high fever, trismus, drooling, muffled voice, and cervical lymphadenopathy has a clinical presentation classic for peritonsillar abscess. Urgent ENT consultation is needed for examination, likely needle aspiration or incision and drainage of the abscess, initiation of IV antibiotics, and assessment of the airway. The progressive trismus and sensation of airway narrowing add urgency. Complications of untreated peritonsillar abscess include airway obstruction, parapharyngeal space extension, mediastinitis, and Lemierre syndrome."
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "id": "neuro_headache_003",
+  "specialty": "Neurology",
+  "title": "Thunderclap Headache in a Middle-Aged Female",
+  "dialogue": [
+    {
+      "speaker": "doctor",
+      "text": "Ms. Rivera, I can see you're in a lot of pain. Can you tell me exactly how this headache started and when?"
+    },
+    {
+      "speaker": "patient",
+      "text": "It hit me like a bomb went off in my head. I was just sitting at my desk at work about three hours ago and suddenly I had the worst headache of my entire life. It came on in seconds, not gradually. I've never experienced anything like this."
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's a very important detail. On a scale of 1 to 10, what would you rate the pain? And have you had any nausea, vomiting, or sensitivity to light?"
+    },
+    {
+      "speaker": "patient",
+      "text": "It's a 10 out of 10, easily. I threw up twice on the way here. The light is bothering me terribly, and I feel like my neck is really stiff and sore. I can't bend my chin to my chest without it hurting badly."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Have you noticed any changes in your vision, any weakness or numbness in your arms or legs, or any difficulty speaking?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Yes, right before the headache I saw these weird flashing lights and then part of my vision went blurry on the right side. My left eyelid also seems to be drooping. I do get migraines sometimes, but this is nothing like my usual migraines. This is completely different and so much worse."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Have you had any recent head trauma, and do you have any history of high blood pressure? Are you on any medications, including blood thinners?"
+    },
+    {
+      "speaker": "patient",
+      "text": "No head trauma. I do have high blood pressure but I ran out of my amlodipine about two weeks ago and haven't refilled it. I'm not on blood thinners. My mother had a brain aneurysm when she was 50, which really scares me."
+    }
+  ],
+  "gold_standard_questions": [
+    {
+      "question": "How suddenly did the headache reach its maximum intensity?",
+      "domain": "symptom_onset",
+      "priority": "critical"
+    },
+    {
+      "question": "Is this the worst headache you have ever experienced?",
+      "domain": "symptom_severity",
+      "priority": "critical"
+    },
+    {
+      "question": "Do you have any neck stiffness or pain with neck flexion?",
+      "domain": "meningeal_signs",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you experienced any visual changes, including blurred vision, double vision, or visual field loss?",
+      "domain": "neurological_symptoms",
+      "priority": "critical"
+    },
+    {
+      "question": "Do you have any drooping of the eyelid, pupil changes, or facial asymmetry?",
+      "domain": "cranial_nerve_exam",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you had any nausea, vomiting, or photophobia?",
+      "domain": "associated_symptoms",
+      "priority": "high"
+    },
+    {
+      "question": "Do you have any weakness, numbness, or difficulty with speech?",
+      "domain": "focal_neurological_deficits",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you had any loss of consciousness or seizure?",
+      "domain": "neurological_status",
+      "priority": "critical"
+    },
+    {
+      "question": "Do you have a history of migraines, and how does this compare?",
+      "domain": "headache_history",
+      "priority": "high"
+    },
+    {
+      "question": "Is there a family history of aneurysms or subarachnoid hemorrhage?",
+      "domain": "family_history",
+      "priority": "high"
+    },
+    {
+      "question": "What is your blood pressure history, and are you currently taking your antihypertensive medication?",
+      "domain": "cardiovascular_risk_factors",
+      "priority": "high"
+    },
+    {
+      "question": "Have you had any recent head injury or trauma?",
+      "domain": "trauma_history",
+      "priority": "high"
+    },
+    {
+      "question": "Are you on any blood thinners or anticoagulants?",
+      "domain": "medications",
+      "priority": "high"
+    },
+    {
+      "question": "Did anything specific trigger this headache, such as exertion, straining, or sexual activity?",
+      "domain": "precipitating_factors",
+      "priority": "medium"
+    },
+    {
+      "question": "Have you experienced any fever or recent illness?",
+      "domain": "infectious_etiology",
+      "priority": "medium"
+    }
+  ],
+  "red_flag_questions": [
+    {
+      "question": "Did the headache reach maximum intensity within seconds to minutes?",
+      "domain": "thunderclap_headache",
+      "reason": "Sudden-onset, maximum-intensity headache (thunderclap headache) is the hallmark presentation of subarachnoid hemorrhage from a ruptured cerebral aneurysm, a neurosurgical emergency with high mortality if not treated promptly."
+    },
+    {
+      "question": "Do you have neck stiffness or pain when bending your chin to your chest?",
+      "domain": "meningeal_irritation",
+      "reason": "Neck stiffness (meningismus) in the setting of thunderclap headache strongly suggests subarachnoid hemorrhage with blood irritating the meninges, requiring emergent CT head and lumbar puncture if CT is negative."
+    },
+    {
+      "question": "Have you noticed any changes in your vision, such as loss of part of your visual field or blurred vision?",
+      "domain": "visual_compromise",
+      "reason": "Vision changes with thunderclap headache may indicate an expanding aneurysm compressing the optic nerve or chiasm, vitreous hemorrhage (Terson syndrome), or raised intracranial pressure, all requiring emergent neuroimaging."
+    },
+    {
+      "question": "Is there any drooping of one eyelid or difference in pupil size?",
+      "domain": "cranial_nerve_palsy",
+      "reason": "A new third cranial nerve palsy (ptosis, mydriasis) with severe headache is highly concerning for a posterior communicating artery aneurysm, which may be expanding or actively rupturing."
+    },
+    {
+      "question": "Have you had any loss of consciousness, confusion, or seizure?",
+      "domain": "altered_consciousness",
+      "reason": "Loss of consciousness or altered mental status with thunderclap headache suggests significant subarachnoid or intracerebral hemorrhage with potential for rapid neurological deterioration."
+    }
+  ],
+  "expected_domains": [
+    "symptom_onset",
+    "symptom_severity",
+    "meningeal_signs",
+    "neurological_symptoms",
+    "cranial_nerve_exam",
+    "associated_symptoms",
+    "focal_neurological_deficits",
+    "headache_history",
+    "family_history",
+    "cardiovascular_risk_factors",
+    "medications",
+    "trauma_history"
+  ],
+  "expected_consult": {
+    "specialty": "Neurology/Neurosurgery",
+    "urgency": "emergent",
+    "reasoning": "A 40-year-old female presenting with thunderclap headache (worst headache of life with sudden onset), meningismus, visual changes, and ipsilateral ptosis with a family history of cerebral aneurysm has a clinical presentation highly suspicious for subarachnoid hemorrhage from aneurysmal rupture. This requires emergent CT head, CT angiography, and neurosurgical consultation. If CT is negative, a lumbar puncture must be performed to rule out subarachnoid hemorrhage."
+  }
+}

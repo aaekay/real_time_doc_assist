@@ -1,0 +1,162 @@
+{
+  "id": "endo_weight_loss_004",
+  "specialty": "Endocrinology",
+  "title": "Unintentional Weight Loss with Polyuria and Polydipsia in a Young Male",
+  "dialogue": [
+    {
+      "speaker": "doctor",
+      "text": "Hello, Mr. Chen. Your intake form mentions you've been losing weight without trying. Tell me more about what's been happening."
+    },
+    {
+      "speaker": "patient",
+      "text": "Yeah, doc, I've lost about 25 pounds in the last six weeks without changing anything. If anything, I've been eating more than usual because I'm constantly hungry. But the weight just keeps dropping."
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's significant. Have you noticed any changes in how much you're drinking or how often you're urinating?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Funny you ask, because I literally cannot stop drinking water. I'm going through like a gallon and a half a day. And I'm peeing all the time, probably every hour or even more. I'm getting up three or four times a night to use the bathroom, which is completely new for me."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Those are important symptoms. Have you been feeling more tired than usual? Any changes in your vision, or any nausea or abdominal pain?"
+    },
+    {
+      "speaker": "patient",
+      "text": "I'm exhausted all the time. I used to run five miles a day and now I can barely get through work. My vision has been blurry off and on for about two weeks now. And the last couple of days I've been feeling really nauseous and my stomach has been hurting. My breath also smells kind of weird, my girlfriend said it smells fruity."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Is there any family history of diabetes in your family? And have you noticed any skin changes, wounds that are slow to heal, or tingling in your hands or feet?"
+    },
+    {
+      "speaker": "patient",
+      "text": "My mom has type 2 diabetes, but she's overweight and I'm pretty lean. I have noticed some tingling in my feet the last week or so, and I cut my hand cooking last week and it's taking forever to heal. Honestly, I thought maybe I had cancer or something, that's why I finally came in."
+    }
+  ],
+  "gold_standard_questions": [
+    {
+      "question": "How much weight have you lost and over what time period?",
+      "domain": "symptom_characterization",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you noticed increased thirst and how much fluid are you consuming daily?",
+      "domain": "polydipsia_assessment",
+      "priority": "critical"
+    },
+    {
+      "question": "How frequently are you urinating, including at night?",
+      "domain": "polyuria_assessment",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you experienced increased appetite despite the weight loss?",
+      "domain": "polyphagia_assessment",
+      "priority": "high"
+    },
+    {
+      "question": "Are you experiencing any nausea, vomiting, or abdominal pain?",
+      "domain": "dka_symptoms",
+      "priority": "critical"
+    },
+    {
+      "question": "Has anyone noticed a fruity or unusual odor to your breath?",
+      "domain": "dka_symptoms",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you noticed any changes in your vision, such as blurriness?",
+      "domain": "hyperglycemia_complications",
+      "priority": "high"
+    },
+    {
+      "question": "Are you experiencing unusual fatigue or weakness?",
+      "domain": "systemic_symptoms",
+      "priority": "high"
+    },
+    {
+      "question": "Have you had any tingling, numbness, or burning in your hands or feet?",
+      "domain": "neuropathy_symptoms",
+      "priority": "high"
+    },
+    {
+      "question": "Have you noticed any slow-healing wounds or frequent infections?",
+      "domain": "hyperglycemia_complications",
+      "priority": "medium"
+    },
+    {
+      "question": "Is there a family history of diabetes, either type 1 or type 2?",
+      "domain": "family_history",
+      "priority": "high"
+    },
+    {
+      "question": "Have you ever had your blood sugar tested, and what were the results?",
+      "domain": "prior_workup",
+      "priority": "high"
+    },
+    {
+      "question": "Have you experienced any rapid or deep breathing?",
+      "domain": "dka_symptoms",
+      "priority": "critical"
+    },
+    {
+      "question": "Are you experiencing any confusion or difficulty concentrating?",
+      "domain": "mental_status",
+      "priority": "high"
+    },
+    {
+      "question": "Do you have any history of autoimmune conditions such as thyroid disease or celiac disease?",
+      "domain": "autoimmune_history",
+      "priority": "medium"
+    }
+  ],
+  "red_flag_questions": [
+    {
+      "question": "Are you experiencing nausea, vomiting, abdominal pain, or fruity-smelling breath?",
+      "domain": "diabetic_ketoacidosis",
+      "reason": "These are classic signs of diabetic ketoacidosis (DKA), a life-threatening metabolic emergency caused by severe insulin deficiency leading to uncontrolled ketone production and metabolic acidosis. DKA requires emergent treatment with IV insulin, fluids, and electrolyte management."
+    },
+    {
+      "question": "How extreme is your thirst, and are you unable to satisfy it regardless of how much you drink?",
+      "domain": "severe_hyperglycemia",
+      "reason": "Extreme, unquenchable thirst indicates severe hyperglycemia with significant osmotic diuresis, which can lead to dangerous dehydration and electrolyte imbalances, potentially progressing to hyperosmolar hyperglycemic state or DKA."
+    },
+    {
+      "question": "Have you experienced any blurred vision or sudden changes in your eyesight?",
+      "domain": "hyperglycemic_complications",
+      "reason": "Blurred vision in the context of new-onset diabetes can indicate osmotic swelling of the lens from severe hyperglycemia. While usually reversible, it signals dangerously elevated blood glucose levels requiring urgent management."
+    },
+    {
+      "question": "Are you having any rapid, deep breathing or feeling short of breath?",
+      "domain": "kussmaul_respirations",
+      "reason": "Deep, labored breathing (Kussmaul respirations) indicates the body's attempt to compensate for severe metabolic acidosis in DKA, a sign that the condition is advanced and requires immediate emergency treatment."
+    },
+    {
+      "question": "Have you experienced any confusion, drowsiness, or difficulty staying awake?",
+      "domain": "altered_mental_status",
+      "reason": "Altered mental status in the setting of suspected DKA or hyperosmolar hyperglycemic state indicates severe metabolic derangement and potential cerebral edema, requiring emergent ICU-level care."
+    }
+  ],
+  "expected_domains": [
+    "symptom_characterization",
+    "polydipsia_assessment",
+    "polyuria_assessment",
+    "polyphagia_assessment",
+    "dka_symptoms",
+    "hyperglycemia_complications",
+    "systemic_symptoms",
+    "neuropathy_symptoms",
+    "family_history",
+    "autoimmune_history",
+    "prior_workup",
+    "mental_status"
+  ],
+  "expected_consult": {
+    "specialty": "Endocrinology",
+    "urgency": "urgent",
+    "reasoning": "A 35-year-old lean male with classic symptoms of polyuria, polydipsia, polyphagia, rapid unintentional weight loss, and signs concerning for DKA (nausea, abdominal pain, fruity breath) likely has new-onset diabetes, possibly type 1 or latent autoimmune diabetes of adults (LADA). Urgent endocrinology consultation is needed for immediate blood glucose and ketone assessment, initiation of insulin therapy, and determination of diabetes type through autoantibody testing and C-peptide levels. If DKA is confirmed, emergent management with IV fluids, insulin, and electrolyte monitoring is required."
+  }
+}

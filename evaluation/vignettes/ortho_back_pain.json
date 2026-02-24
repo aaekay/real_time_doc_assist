@@ -1,0 +1,162 @@
+{
+  "id": "ortho_back_pain_007",
+  "specialty": "Orthopedics/Neurosurgery",
+  "title": "Lower Back Pain with Radiculopathy and Foot Drop",
+  "dialogue": [
+    {
+      "speaker": "doctor",
+      "text": "Mr. Jackson, I understand you're having severe back pain. Can you tell me when it started and what happened?"
+    },
+    {
+      "speaker": "patient",
+      "text": "I've had back pain on and off for years, but three days ago I was lifting a heavy box at work and felt a sharp pop in my lower back. The pain shot down my left leg like an electric shock. Since then the pain hasn't let up at all, and it's gotten worse every day."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Can you describe exactly where the pain goes in your leg? And have you noticed any numbness, tingling, or weakness?"
+    },
+    {
+      "speaker": "patient",
+      "text": "The pain starts in my lower back and shoots down the back of my left leg all the way to my foot. My left foot has gone numb, and here's what's really scaring me: since yesterday I can't lift my left foot up properly. I keep tripping over it because it just drops down. My toes feel like they're asleep all the time."
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's very important. I need to ask you some specific questions. Have you had any changes in your bowel or bladder function? Any difficulty urinating or having a bowel movement, or any accidents?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Now that you mention it, I've been having trouble knowing when I need to pee. Yesterday I had a hard time starting the stream, and I've felt like my bladder isn't emptying completely. I also had an accident last night where I didn't make it to the bathroom in time. I was too embarrassed to mention it."
+    },
+    {
+      "speaker": "doctor",
+      "text": "You absolutely did the right thing telling me. One more important question: have you noticed any numbness in the area between your legs, around your buttocks, or in the area where you would sit on a saddle?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Yes, actually. The whole area around my bottom and inner thighs has gone numb. It started yesterday and it's been getting worse. I can barely feel it when I wipe after using the toilet. The pain in my leg is also now going down both legs, not just the left one. I'm really frightened, doctor."
+    }
+  ],
+  "gold_standard_questions": [
+    {
+      "question": "Can you describe the onset and mechanism of your back pain?",
+      "domain": "symptom_characterization",
+      "priority": "high"
+    },
+    {
+      "question": "Does the pain radiate down one or both legs, and how far does it go?",
+      "domain": "radiculopathy_assessment",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you noticed any weakness in your foot or leg, such as difficulty lifting your foot?",
+      "domain": "motor_deficit",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you experienced any numbness in the area between your legs, around your buttocks, or inner thighs (saddle area)?",
+      "domain": "cauda_equina_screening",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you had any changes in bladder function, such as difficulty urinating, incontinence, or urinary retention?",
+      "domain": "cauda_equina_screening",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you had any changes in bowel function, including incontinence or constipation?",
+      "domain": "cauda_equina_screening",
+      "priority": "critical"
+    },
+    {
+      "question": "Is the weakness or numbness getting worse, staying the same, or improving?",
+      "domain": "symptom_progression",
+      "priority": "critical"
+    },
+    {
+      "question": "Are the symptoms now affecting both legs or just one?",
+      "domain": "bilateral_involvement",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you had any recent fever, weight loss, or history of cancer?",
+      "domain": "red_flag_screening",
+      "priority": "high"
+    },
+    {
+      "question": "Do you have any history of prior back surgery or spinal injections?",
+      "domain": "surgical_history",
+      "priority": "high"
+    },
+    {
+      "question": "Are you currently taking any blood thinners or anticoagulants?",
+      "domain": "medications",
+      "priority": "high"
+    },
+    {
+      "question": "Have you had any previous imaging of your spine, such as MRI or X-rays?",
+      "domain": "prior_workup",
+      "priority": "medium"
+    },
+    {
+      "question": "Have you noticed any sexual dysfunction?",
+      "domain": "cauda_equina_screening",
+      "priority": "high"
+    },
+    {
+      "question": "What is your occupation, and does it involve heavy lifting or prolonged sitting?",
+      "domain": "occupational_history",
+      "priority": "medium"
+    },
+    {
+      "question": "What treatments have you tried so far, and have any helped?",
+      "domain": "treatment_history",
+      "priority": "medium"
+    }
+  ],
+  "red_flag_questions": [
+    {
+      "question": "Have you noticed any numbness in the saddle area, meaning the region around your buttocks, perineum, and inner thighs?",
+      "domain": "saddle_anesthesia",
+      "reason": "Saddle anesthesia is a hallmark symptom of cauda equina syndrome, caused by compression of the sacral nerve roots. This is a surgical emergency as permanent neurological damage, including loss of bowel, bladder, and sexual function, can result if decompression is not performed within 24-48 hours."
+    },
+    {
+      "question": "Are you having any difficulty controlling your bladder or bowels, including retention or incontinence?",
+      "domain": "bladder_bowel_dysfunction",
+      "reason": "Bladder or bowel dysfunction (retention, incontinence, or loss of sensation) in the setting of back pain and radiculopathy is a cardinal sign of cauda equina syndrome, demanding emergent MRI and surgical decompression."
+    },
+    {
+      "question": "Have you noticed progressive weakness in your foot, such as inability to lift your foot or toes (foot drop)?",
+      "domain": "progressive_motor_deficit",
+      "reason": "Acute foot drop represents a significant motor deficit indicating severe nerve root compression. Progressive motor weakness, especially when bilateral, suggests impending or established cauda equina syndrome requiring emergent surgical intervention."
+    },
+    {
+      "question": "Are the leg symptoms now affecting both legs instead of just one?",
+      "domain": "bilateral_radiculopathy",
+      "reason": "Bilateral leg symptoms in the setting of acute back pain with neurological deficits suggest a large central disc herniation compressing multiple nerve roots, which is the most common cause of cauda equina syndrome and constitutes a surgical emergency."
+    },
+    {
+      "question": "Are your symptoms rapidly getting worse over hours to days?",
+      "domain": "rapid_progression",
+      "reason": "Rapidly progressive neurological deficits in the setting of back pain indicate an evolving cauda equina syndrome or other compressive emergency such as epidural abscess or hematoma, requiring emergent imaging and likely surgical intervention."
+    }
+  ],
+  "expected_domains": [
+    "symptom_characterization",
+    "radiculopathy_assessment",
+    "motor_deficit",
+    "cauda_equina_screening",
+    "symptom_progression",
+    "bilateral_involvement",
+    "red_flag_screening",
+    "surgical_history",
+    "medications",
+    "prior_workup",
+    "occupational_history",
+    "treatment_history"
+  ],
+  "expected_consult": {
+    "specialty": "Orthopedics/Neurosurgery",
+    "urgency": "emergent",
+    "reasoning": "A 50-year-old male presenting with acute lower back pain, bilateral leg radiculopathy, progressive foot drop, saddle anesthesia, and bladder dysfunction has the classic presentation of cauda equina syndrome. This is a surgical emergency requiring emergent MRI of the lumbar spine and immediate neurosurgical or orthopedic spine surgery consultation for surgical decompression. Delays in treatment beyond 24-48 hours significantly worsen outcomes for bowel, bladder, and motor function recovery."
+  }
+}

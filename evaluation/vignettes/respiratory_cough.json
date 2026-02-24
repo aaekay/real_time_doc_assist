@@ -1,0 +1,162 @@
+{
+  "id": "resp_cough_005",
+  "specialty": "Pulmonology",
+  "title": "Chronic Cough with Hemoptysis in an Elderly Smoker",
+  "dialogue": [
+    {
+      "speaker": "doctor",
+      "text": "Mr. Williams, I see you've been dealing with a cough for about three months now. Can you tell me how it started and how it's progressed?"
+    },
+    {
+      "speaker": "patient",
+      "text": "It started as just a dry, nagging cough that I figured was from the weather or maybe allergies. But it hasn't gone away and it's gotten worse. Now it's more of a deep, rattling cough, and for the past two weeks, I've been coughing up stuff."
+    },
+    {
+      "speaker": "doctor",
+      "text": "When you say you're coughing up stuff, can you describe what it looks like? Any blood? And how much are we talking about?"
+    },
+    {
+      "speaker": "patient",
+      "text": "At first it was just yellowish phlegm, but about a week ago I noticed streaks of blood in it. Then two days ago I coughed up about a tablespoon of bright red blood, and it really scared me. That's what made me come in. It's happened three times now."
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'm glad you came in. I need to ask about your smoking history. How long have you smoked, and how much?"
+    },
+    {
+      "speaker": "patient",
+      "text": "I've been smoking a pack a day for about 40 years. I know, I know, I should have quit a long time ago. I tried a few times but never stuck with it. I'm also having a hard time catching my breath doing simple things now, like walking to the mailbox. And my wife says I've been losing weight. I've dropped maybe 15 pounds in the last two months without trying."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Have you had any fevers, night sweats, chest pain, or any change in your voice? And any history of lung problems or exposure to asbestos or other chemicals?"
+    },
+    {
+      "speaker": "patient",
+      "text": "I've been waking up drenched in sweat several nights a week for the past month. I do have some dull aching pain on the right side of my chest that seems to be getting worse. My voice has gotten hoarser too. I worked in construction for 30 years, so I was probably around asbestos and all kinds of dust. No fevers that I've noticed though."
+    }
+  ],
+  "gold_standard_questions": [
+    {
+      "question": "How long have you had the cough, and has it changed in character over time?",
+      "domain": "symptom_characterization",
+      "priority": "high"
+    },
+    {
+      "question": "Have you coughed up any blood, and if so, how much and how often?",
+      "domain": "hemoptysis_assessment",
+      "priority": "critical"
+    },
+    {
+      "question": "What is your smoking history, including how many packs per day and for how many years?",
+      "domain": "smoking_history",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you experienced any unintentional weight loss, and how much?",
+      "domain": "constitutional_symptoms",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you been having night sweats?",
+      "domain": "constitutional_symptoms",
+      "priority": "critical"
+    },
+    {
+      "question": "Are you experiencing any shortness of breath, and has your exercise tolerance decreased?",
+      "domain": "respiratory_function",
+      "priority": "high"
+    },
+    {
+      "question": "Do you have any chest pain, and can you describe its location and character?",
+      "domain": "associated_symptoms",
+      "priority": "high"
+    },
+    {
+      "question": "Have you noticed any hoarseness or change in your voice?",
+      "domain": "associated_symptoms",
+      "priority": "high"
+    },
+    {
+      "question": "Do you have any history of occupational exposure to asbestos, chemicals, or industrial dust?",
+      "domain": "occupational_history",
+      "priority": "high"
+    },
+    {
+      "question": "Have you had any fevers or been exposed to anyone with tuberculosis?",
+      "domain": "infectious_etiology",
+      "priority": "high"
+    },
+    {
+      "question": "Have you ever had a chest X-ray or CT scan, and when was the last one?",
+      "domain": "prior_workup",
+      "priority": "high"
+    },
+    {
+      "question": "Do you have any history of COPD, emphysema, or other lung diseases?",
+      "domain": "medical_history",
+      "priority": "high"
+    },
+    {
+      "question": "Have you noticed any swelling in your face, neck, or arms?",
+      "domain": "superior_vena_cava_syndrome",
+      "priority": "medium"
+    },
+    {
+      "question": "Have you experienced any bone pain or new headaches?",
+      "domain": "metastatic_symptoms",
+      "priority": "medium"
+    },
+    {
+      "question": "Is there any family history of lung cancer or other cancers?",
+      "domain": "family_history",
+      "priority": "medium"
+    }
+  ],
+  "red_flag_questions": [
+    {
+      "question": "Have you coughed up blood, and if so, how much and how frequently?",
+      "domain": "hemoptysis",
+      "reason": "Hemoptysis in a long-term smoker is a red flag for lung malignancy. Even small-volume hemoptysis requires urgent imaging and possible bronchoscopy to rule out endobronchial tumor or other serious pathology."
+    },
+    {
+      "question": "Have you had unintentional weight loss in the past few months?",
+      "domain": "malignancy_warning",
+      "reason": "Unintentional weight loss of more than 5% of body weight in a smoker with chronic cough and hemoptysis is highly suspicious for underlying malignancy and necessitates urgent diagnostic workup."
+    },
+    {
+      "question": "Have you been experiencing night sweats?",
+      "domain": "constitutional_b_symptoms",
+      "reason": "Night sweats combined with weight loss, chronic cough, and hemoptysis raise concern for lung cancer or pulmonary tuberculosis, both of which require urgent evaluation and management."
+    },
+    {
+      "question": "Has there been any change in your voice or new hoarseness?",
+      "domain": "recurrent_laryngeal_nerve",
+      "reason": "New-onset hoarseness in a smoker with chronic cough may indicate recurrent laryngeal nerve involvement by a mediastinal or apical lung tumor, suggesting locally advanced disease."
+    },
+    {
+      "question": "Do you have persistent or worsening chest pain on one side?",
+      "domain": "chest_wall_invasion",
+      "reason": "Unilateral chest pain that is progressively worsening in the context of other red-flag symptoms may indicate tumor invasion of the chest wall or pleura, suggesting advanced lung malignancy."
+    }
+  ],
+  "expected_domains": [
+    "symptom_characterization",
+    "hemoptysis_assessment",
+    "smoking_history",
+    "constitutional_symptoms",
+    "respiratory_function",
+    "associated_symptoms",
+    "occupational_history",
+    "infectious_etiology",
+    "prior_workup",
+    "medical_history",
+    "metastatic_symptoms",
+    "family_history"
+  ],
+  "expected_consult": {
+    "specialty": "Pulmonology",
+    "urgency": "urgent",
+    "reasoning": "A 60-year-old male with a 40-pack-year smoking history, chronic cough of three months duration, hemoptysis, unintentional weight loss, night sweats, progressive dyspnea, hoarseness, and occupational asbestos exposure has a presentation highly concerning for lung malignancy. Urgent pulmonology referral is needed for chest CT, possible bronchoscopy with biopsy, and staging workup. Tuberculosis must also be excluded given the constitutional symptoms."
+  }
+}

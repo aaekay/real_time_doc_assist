@@ -1,0 +1,154 @@
+{
+  "id": "peds_fever_002",
+  "specialty": "Pediatrics",
+  "title": "Prolonged High Fever with Rash in a Toddler",
+  "dialogue": [
+    {
+      "speaker": "doctor",
+      "text": "Hello, Mrs. Garcia. I understand your daughter Mia has been running a fever for five days now. Can you tell me more about what's been going on?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Yes, doctor, I'm really worried. Her fever has been between 103 and 104.5 for five days straight. Tylenol brings it down a little but it always comes right back. And now she has this rash all over her trunk and arms that showed up yesterday."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Can you describe the rash for me? Is it flat or raised? Does it blanch when you press on it? And has Mia been eating and drinking normally?"
+    },
+    {
+      "speaker": "patient",
+      "text": "It's mostly red and blotchy, but I noticed a few spots on her legs that are dark red, almost purple, and they don't go away when I press them. She's barely eating anything and only taking small sips of water. She's had maybe two wet diapers today instead of her usual five or six."
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's concerning. Has she been acting differently otherwise? Is she as active as usual, or is she more sleepy or irritable? And has she complained about her neck hurting or seemed stiff?"
+    },
+    {
+      "speaker": "patient",
+      "text": "She's been really cranky and clingy, and today she's been sleeping a lot more than normal. She cries when I try to bend her head forward to put on her shirt. Her eyes also look red and puffy, and her lips are really dry and cracked. I also noticed her fingers seem a bit swollen."
+    }
+  ],
+  "gold_standard_questions": [
+    {
+      "question": "How high has the fever been, and how long has it persisted continuously?",
+      "domain": "symptom_characterization",
+      "priority": "critical"
+    },
+    {
+      "question": "Can you describe the rash in detail, including whether any spots are non-blanching or petechial?",
+      "domain": "symptom_characterization",
+      "priority": "critical"
+    },
+    {
+      "question": "Is the child showing any signs of neck stiffness or pain with neck flexion?",
+      "domain": "meningeal_signs",
+      "priority": "critical"
+    },
+    {
+      "question": "How is the child's level of alertness and activity compared to baseline?",
+      "domain": "mental_status",
+      "priority": "critical"
+    },
+    {
+      "question": "How much fluid is the child taking in, and how many wet diapers has she had today?",
+      "domain": "hydration_status",
+      "priority": "critical"
+    },
+    {
+      "question": "Are there any signs of conjunctival injection, lip changes, or swelling of the hands and feet?",
+      "domain": "kawasaki_criteria",
+      "priority": "high"
+    },
+    {
+      "question": "Has the child had any vomiting, diarrhea, or abdominal pain?",
+      "domain": "associated_symptoms",
+      "priority": "high"
+    },
+    {
+      "question": "Is the child's vaccination history up to date?",
+      "domain": "immunization_status",
+      "priority": "high"
+    },
+    {
+      "question": "Has there been any recent travel or known exposure to sick contacts?",
+      "domain": "exposure_history",
+      "priority": "high"
+    },
+    {
+      "question": "Does the child attend daycare, and has anyone else there been ill?",
+      "domain": "exposure_history",
+      "priority": "medium"
+    },
+    {
+      "question": "Has the child had any seizures or episodes of unusual movements?",
+      "domain": "neurological_status",
+      "priority": "critical"
+    },
+    {
+      "question": "Has the child shown any signs of difficulty breathing or rapid breathing?",
+      "domain": "respiratory_status",
+      "priority": "high"
+    },
+    {
+      "question": "Are there any known allergies or chronic medical conditions?",
+      "domain": "medical_history",
+      "priority": "medium"
+    },
+    {
+      "question": "Has the child been given any antibiotics or other medications recently?",
+      "domain": "medications",
+      "priority": "medium"
+    },
+    {
+      "question": "Is there any lymph node swelling, particularly in the neck?",
+      "domain": "kawasaki_criteria",
+      "priority": "high"
+    }
+  ],
+  "red_flag_questions": [
+    {
+      "question": "Does the child have any neck stiffness or pain when flexing the neck forward?",
+      "domain": "meningeal_signs",
+      "reason": "Neck stiffness (nuchal rigidity) in a febrile child is a hallmark sign of meningitis, which requires emergent evaluation with lumbar puncture and empiric antibiotics."
+    },
+    {
+      "question": "Are there any non-blanching, dark red or purple spots on the skin?",
+      "domain": "petechial_rash",
+      "reason": "A petechial or purpuric rash in a febrile child raises serious concern for meningococcemia or other invasive bacterial infections, which can be rapidly fatal without treatment."
+    },
+    {
+      "question": "Is the child unusually sleepy, difficult to rouse, or showing altered level of consciousness?",
+      "domain": "altered_consciousness",
+      "reason": "Altered mental status in a febrile child can indicate meningitis, encephalitis, or sepsis, all of which are life-threatening emergencies requiring immediate intervention."
+    },
+    {
+      "question": "Has the child had a bulging fontanelle or high-pitched inconsolable crying?",
+      "domain": "increased_intracranial_pressure",
+      "reason": "These signs suggest elevated intracranial pressure, possibly from meningitis or encephalitis, necessitating urgent imaging and intervention."
+    },
+    {
+      "question": "Has the child had any seizure activity during this illness?",
+      "domain": "neurological_emergency",
+      "reason": "Seizures in the setting of prolonged high fever and possible meningeal signs may indicate complex febrile seizures, meningitis, or encephalitis, all requiring emergent workup."
+    }
+  ],
+  "expected_domains": [
+    "symptom_characterization",
+    "meningeal_signs",
+    "mental_status",
+    "hydration_status",
+    "kawasaki_criteria",
+    "associated_symptoms",
+    "immunization_status",
+    "exposure_history",
+    "neurological_status",
+    "respiratory_status",
+    "medical_history",
+    "medications"
+  ],
+  "expected_consult": {
+    "specialty": "Pediatrics/Infectious Disease",
+    "urgency": "urgent",
+    "reasoning": "A 3-year-old with five days of high fever, a rash with petechial components, signs of neck stiffness, decreased alertness, and features suggestive of Kawasaki disease (conjunctival injection, lip changes, extremity swelling) requires urgent pediatric and infectious disease evaluation. Differential includes Kawasaki disease, meningococcemia, and other serious bacterial infections. Immediate lab work, blood cultures, and possibly lumbar puncture are indicated."
+  }
+}

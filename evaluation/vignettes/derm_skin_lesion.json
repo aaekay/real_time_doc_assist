@@ -1,0 +1,160 @@
+{
+  "id": "derm_skin_lesion_009",
+  "specialty": "Dermatology",
+  "title": "Changing Mole with Irregular Features in an Elderly Male",
+  "dialogue": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning, Mr. Anderson. I see you're here about a mole that's been changing. Can you tell me about it?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Sure, doc. I've had this mole on my upper back for as long as I can remember, but my wife noticed about three months ago that it's been looking different. She says it's gotten bigger and darker, and the shape has changed. She took a picture of it and compared it to one from last summer, and it's definitely grown."
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's very observant of your wife. Can you tell me more about the changes? Has it changed color, and is it the same color throughout? Has it been itching, bleeding, or crusting?"
+    },
+    {
+      "speaker": "patient",
+      "text": "It used to be a uniform light brown, but now it has areas of dark brown, almost black in one spot, and there's a reddish-blue area too. The edges look jagged and irregular instead of smooth like it used to be. It started itching about a month ago, and last week it bled after I scratched it. It's also started crusting a bit on the surface."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Do you have any idea how large it is now? And have you noticed any other new or changing moles, or any lumps under your skin nearby?"
+    },
+    {
+      "speaker": "patient",
+      "text": "My wife measured it and said it's about the size of a dime, so maybe three-quarters of an inch across. She said one half of it looks completely different from the other half. I haven't noticed any new moles, but I did feel a small firm bump in my left armpit a few weeks ago. I thought it was just a swollen gland."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Tell me about your skin history. Have you had significant sun exposure over the years? Any history of bad sunburns, tanning bed use, or skin cancer in your family?"
+    },
+    {
+      "speaker": "patient",
+      "text": "I worked outdoors in construction for 35 years, so I was in the sun all day most days. I got burnt pretty badly many times, especially when I was younger. I never used sunscreen much. I'm fair-skinned and I burn easily. My older brother had a melanoma removed from his leg about five years ago. I've never been to a dermatologist."
+    }
+  ],
+  "gold_standard_questions": [
+    {
+      "question": "How long have you had this mole, and when did you first notice it changing?",
+      "domain": "symptom_timeline",
+      "priority": "high"
+    },
+    {
+      "question": "Is the mole asymmetric, meaning one half looks different from the other?",
+      "domain": "abcde_criteria",
+      "priority": "critical"
+    },
+    {
+      "question": "Are the borders of the mole irregular, ragged, or poorly defined?",
+      "domain": "abcde_criteria",
+      "priority": "critical"
+    },
+    {
+      "question": "Does the mole have multiple colors or an uneven distribution of color?",
+      "domain": "abcde_criteria",
+      "priority": "critical"
+    },
+    {
+      "question": "What is the diameter of the mole, and is it larger than 6 millimeters?",
+      "domain": "abcde_criteria",
+      "priority": "critical"
+    },
+    {
+      "question": "Has the mole been evolving in size, shape, color, or elevation over time?",
+      "domain": "abcde_criteria",
+      "priority": "critical"
+    },
+    {
+      "question": "Has the mole been itching, bleeding, crusting, or ulcerating?",
+      "domain": "symptom_characterization",
+      "priority": "high"
+    },
+    {
+      "question": "Have you noticed any new lumps or bumps near the mole or in your lymph node areas such as the armpits, groin, or neck?",
+      "domain": "lymph_node_assessment",
+      "priority": "critical"
+    },
+    {
+      "question": "What is your history of sun exposure and sunburn, particularly blistering sunburns?",
+      "domain": "uv_exposure_history",
+      "priority": "high"
+    },
+    {
+      "question": "Have you ever used tanning beds?",
+      "domain": "uv_exposure_history",
+      "priority": "medium"
+    },
+    {
+      "question": "Is there any family history of melanoma or other skin cancers?",
+      "domain": "family_history",
+      "priority": "high"
+    },
+    {
+      "question": "What is your skin type? Do you burn easily or tan easily?",
+      "domain": "risk_factor_assessment",
+      "priority": "medium"
+    },
+    {
+      "question": "Do you have many moles or any history of atypical or dysplastic nevi?",
+      "domain": "personal_risk_factors",
+      "priority": "medium"
+    },
+    {
+      "question": "Have you ever had a skin cancer or a mole removed before?",
+      "domain": "medical_history",
+      "priority": "medium"
+    },
+    {
+      "question": "Have you had any unexplained weight loss, fatigue, or other systemic symptoms?",
+      "domain": "constitutional_symptoms",
+      "priority": "high"
+    }
+  ],
+  "red_flag_questions": [
+    {
+      "question": "Is the mole asymmetric, with one half looking different from the other?",
+      "domain": "asymmetry",
+      "reason": "Asymmetry is one of the key ABCDE criteria for melanoma. A mole in which one half does not match the other is concerning for malignant transformation and warrants urgent biopsy."
+    },
+    {
+      "question": "Are the borders of the mole irregular, scalloped, or poorly defined?",
+      "domain": "border_irregularity",
+      "reason": "Irregular, ragged, or blurred borders are a hallmark feature of melanoma, distinguishing it from benign nevi which typically have smooth, well-defined borders."
+    },
+    {
+      "question": "Does the mole contain multiple colors such as shades of brown, black, red, white, or blue?",
+      "domain": "color_variation",
+      "reason": "Multiple colors within a single lesion suggest heterogeneous cell populations, which is characteristic of melanoma. The presence of blue, white, or red hues is particularly concerning for invasive or regressing melanoma."
+    },
+    {
+      "question": "Is the mole larger than 6 millimeters (about the size of a pencil eraser)?",
+      "domain": "diameter",
+      "reason": "While melanomas can be smaller, a diameter greater than 6mm is a recognized warning sign. Increasing size is especially concerning when combined with other ABCDE features."
+    },
+    {
+      "question": "Has the mole been evolving or changing in size, shape, color, or symptoms over recent weeks to months?",
+      "domain": "evolution",
+      "reason": "Evolution of a mole is one of the most important melanoma warning signs. Any mole that is changing in any way should be considered suspicious and biopsied, as benign nevi generally remain stable over time."
+    }
+  ],
+  "expected_domains": [
+    "symptom_timeline",
+    "abcde_criteria",
+    "symptom_characterization",
+    "lymph_node_assessment",
+    "uv_exposure_history",
+    "family_history",
+    "risk_factor_assessment",
+    "personal_risk_factors",
+    "medical_history",
+    "constitutional_symptoms"
+  ],
+  "expected_consult": {
+    "specialty": "Dermatology",
+    "urgency": "routine",
+    "reasoning": "A 65-year-old fair-skinned male with extensive lifetime UV exposure, family history of melanoma, and a mole meeting all ABCDE criteria (asymmetry, border irregularity, color variation, diameter over 6mm, and evolution) with symptoms of bleeding and itching requires prompt dermatology referral for excisional biopsy. The palpable axillary lymph node is concerning for possible regional metastasis and should be evaluated with imaging and possible fine needle aspiration. While not an emergency requiring same-day evaluation, this should be seen within one to two weeks and should not be delayed."
+  }
+}

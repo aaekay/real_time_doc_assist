@@ -1,0 +1,162 @@
+{
+  "id": "gastro_abd_pain_006",
+  "specialty": "Gastroenterology",
+  "title": "Right Upper Quadrant Pain with Post-Meal Worsening",
+  "dialogue": [
+    {
+      "speaker": "doctor",
+      "text": "Good afternoon, Mrs. Patel. You mentioned right-sided abdominal pain. When did this start, and can you point to exactly where it hurts?"
+    },
+    {
+      "speaker": "patient",
+      "text": "It started about three weeks ago, but it's been getting worse. The pain is right here, under my ribs on the right side. It's a crampy, squeezing kind of pain that comes in waves, and it gets really bad after I eat, especially if I have anything greasy or fried."
+    },
+    {
+      "speaker": "doctor",
+      "text": "How long do the episodes usually last, and does the pain travel anywhere else, like to your back or shoulder?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Each episode lasts about 30 minutes to an hour, sometimes longer. The pain does go around to my right shoulder blade, which I thought was weird. Last night was the worst episode yet. I had pizza for dinner and within an hour I was doubled over in pain. I also felt really nauseous and threw up twice."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Have you noticed any fever, chills, changes in the color of your skin or eyes, or any changes in your stool or urine color?"
+    },
+    {
+      "speaker": "patient",
+      "text": "I did feel feverish last night and this morning. I checked my temperature and it was 101.2. I haven't noticed my skin turning yellow, but my husband said my eyes looked a little yellow this morning. Now that you mention it, my urine has been darker than usual, like a tea color, for the past few days."
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's helpful to know. Do you have any medical history I should be aware of? Any previous abdominal surgeries or similar episodes in the past?"
+    },
+    {
+      "speaker": "patient",
+      "text": "I had a similar but milder episode about six months ago that went away on its own, so I never followed up. I'm 45, I have high cholesterol, and I take birth control pills. I've had two pregnancies. My mother and sister both had their gallbladders removed. No surgeries on my end though."
+    }
+  ],
+  "gold_standard_questions": [
+    {
+      "question": "Can you describe the exact location, character, and severity of your abdominal pain?",
+      "domain": "symptom_characterization",
+      "priority": "critical"
+    },
+    {
+      "question": "Does the pain worsen after eating, particularly fatty or greasy foods?",
+      "domain": "symptom_triggers",
+      "priority": "critical"
+    },
+    {
+      "question": "Does the pain radiate to your back or right shoulder blade?",
+      "domain": "symptom_characterization",
+      "priority": "high"
+    },
+    {
+      "question": "How long do the pain episodes typically last?",
+      "domain": "symptom_duration",
+      "priority": "high"
+    },
+    {
+      "question": "Have you experienced any nausea or vomiting with the pain?",
+      "domain": "associated_symptoms",
+      "priority": "high"
+    },
+    {
+      "question": "Have you had any fever or chills?",
+      "domain": "infection_signs",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you or anyone else noticed yellowing of your skin or eyes?",
+      "domain": "jaundice_assessment",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you noticed any changes in the color of your urine or stool?",
+      "domain": "biliary_obstruction",
+      "priority": "high"
+    },
+    {
+      "question": "Have you had similar episodes in the past?",
+      "domain": "symptom_history",
+      "priority": "high"
+    },
+    {
+      "question": "Is there a family history of gallbladder disease or gallstones?",
+      "domain": "family_history",
+      "priority": "medium"
+    },
+    {
+      "question": "What medications are you currently taking, including oral contraceptives?",
+      "domain": "medications",
+      "priority": "high"
+    },
+    {
+      "question": "Does the pain get worse when pressure is applied under your right ribs during a deep breath?",
+      "domain": "murphys_sign",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you had any prior abdominal imaging, such as an ultrasound?",
+      "domain": "prior_workup",
+      "priority": "medium"
+    },
+    {
+      "question": "Have you experienced any itching of your skin?",
+      "domain": "cholestasis_symptoms",
+      "priority": "medium"
+    },
+    {
+      "question": "Has your appetite changed, and are you able to tolerate any foods without pain?",
+      "domain": "dietary_impact",
+      "priority": "medium"
+    }
+  ],
+  "red_flag_questions": [
+    {
+      "question": "Does pressure under your right rib cage during a deep breath cause you to stop breathing in from pain?",
+      "domain": "murphys_sign",
+      "reason": "A positive Murphy's sign (inspiratory arrest during right upper quadrant palpation) is highly specific for acute cholecystitis, indicating gallbladder inflammation that may require surgical intervention."
+    },
+    {
+      "question": "Have you had a fever along with your abdominal pain?",
+      "domain": "cholecystitis_cholangitis",
+      "reason": "Fever in combination with right upper quadrant pain and jaundice (Charcot's triad) suggests ascending cholangitis, a potentially life-threatening biliary infection requiring emergent intervention including antibiotics and biliary decompression."
+    },
+    {
+      "question": "Have you or anyone noticed yellowing of your eyes or skin?",
+      "domain": "obstructive_jaundice",
+      "reason": "Jaundice with right upper quadrant pain may indicate a common bile duct stone causing obstruction, which can lead to cholangitis or pancreatitis if not addressed promptly."
+    },
+    {
+      "question": "Have you experienced any severe rigors, mental confusion, or feeling very unwell with the fever?",
+      "domain": "septic_cholangitis",
+      "reason": "Charcot's triad (fever, jaundice, RUQ pain) progressing to Reynolds' pentad (adding hypotension and altered mental status) indicates septic cholangitis, a surgical emergency with high mortality without emergent biliary drainage."
+    },
+    {
+      "question": "Is the pain now constant rather than coming in waves?",
+      "domain": "complicated_biliary_disease",
+      "reason": "A shift from colicky, intermittent biliary pain to constant pain suggests progression from simple biliary colic to acute cholecystitis, which may require urgent surgical evaluation for cholecystectomy."
+    }
+  ],
+  "expected_domains": [
+    "symptom_characterization",
+    "symptom_triggers",
+    "associated_symptoms",
+    "infection_signs",
+    "jaundice_assessment",
+    "biliary_obstruction",
+    "murphys_sign",
+    "symptom_history",
+    "family_history",
+    "medications",
+    "prior_workup",
+    "cholestasis_symptoms"
+  ],
+  "expected_consult": {
+    "specialty": "Gastroenterology/Surgery",
+    "urgency": "urgent",
+    "reasoning": "A 45-year-old female with right upper quadrant pain worsened by fatty food, radiation to the right shoulder blade, fever, and new-onset jaundice with dark urine presents with signs of complicated biliary disease. The combination of pain, fever, and jaundice (Charcot's triad) raises concern for cholangitis in addition to acute cholecystitis. Urgent surgical and gastroenterology consultation is needed for right upper quadrant ultrasound, lab workup including liver function tests and CBC, and likely ERCP if choledocholithiasis is confirmed. Cholecystectomy will ultimately be required."
+  }
+}

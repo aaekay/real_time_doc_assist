@@ -1,0 +1,151 @@
+{
+  "id": "cardio_chest_pain_001",
+  "specialty": "Cardiology",
+  "title": "Exertional Chest Pain in a Diabetic Male",
+  "dialogue": [
+    {
+      "speaker": "doctor",
+      "text": "Good morning, Mr. Thompson. I see you're here for chest pain. Can you tell me when this started and what it feels like?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Hi, doctor. It started about two weeks ago. I get this heavy pressure right in the center of my chest whenever I walk up stairs or do anything physical. It feels like someone is sitting on my chest."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Does the pain go anywhere else, like your arm, jaw, or back? And how long does it last when it comes on?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Yes, actually, it goes down my left arm sometimes and I feel it in my jaw too. It usually lasts about five to ten minutes and goes away when I sit down and rest. But yesterday it lasted almost fifteen minutes and I was sweating pretty badly."
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's very important information. I see from your chart you have type 2 diabetes. Are you on any medications for that? And do you have any history of high blood pressure or high cholesterol?"
+    },
+    {
+      "speaker": "patient",
+      "text": "I take metformin for the diabetes, but I'll be honest, I haven't been great about checking my sugars. My dad had a heart attack at 58. I think my cholesterol was high last time they checked it, but I never started the medication for it. I also get short of breath going up just one flight of stairs now, which never used to happen."
+    }
+  ],
+  "gold_standard_questions": [
+    {
+      "question": "Can you describe the exact location and character of the chest pain?",
+      "domain": "symptom_characterization",
+      "priority": "critical"
+    },
+    {
+      "question": "Does the pain radiate to your arm, jaw, neck, or back?",
+      "domain": "symptom_characterization",
+      "priority": "critical"
+    },
+    {
+      "question": "What triggers the chest pain, and what relieves it?",
+      "domain": "symptom_characterization",
+      "priority": "critical"
+    },
+    {
+      "question": "How long does each episode of chest pain last?",
+      "domain": "symptom_characterization",
+      "priority": "high"
+    },
+    {
+      "question": "Have you experienced any associated shortness of breath, sweating, nausea, or lightheadedness?",
+      "domain": "associated_symptoms",
+      "priority": "critical"
+    },
+    {
+      "question": "Is the pain getting worse or happening more frequently over the past two weeks?",
+      "domain": "symptom_progression",
+      "priority": "critical"
+    },
+    {
+      "question": "Do you have a family history of heart disease or heart attacks?",
+      "domain": "family_history",
+      "priority": "high"
+    },
+    {
+      "question": "What is your current diabetes management, and what was your last HbA1c?",
+      "domain": "medical_history",
+      "priority": "high"
+    },
+    {
+      "question": "Do you have a history of high blood pressure or high cholesterol?",
+      "domain": "cardiovascular_risk_factors",
+      "priority": "high"
+    },
+    {
+      "question": "Do you smoke or have you ever smoked?",
+      "domain": "cardiovascular_risk_factors",
+      "priority": "high"
+    },
+    {
+      "question": "Have you ever had an EKG, stress test, or echocardiogram before?",
+      "domain": "prior_workup",
+      "priority": "medium"
+    },
+    {
+      "question": "Are you currently taking aspirin or any blood thinners?",
+      "domain": "medications",
+      "priority": "high"
+    },
+    {
+      "question": "Have you experienced any episodes of chest pain at rest?",
+      "domain": "symptom_characterization",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you noticed any swelling in your legs or ankles recently?",
+      "domain": "associated_symptoms",
+      "priority": "medium"
+    },
+    {
+      "question": "How much physical activity could you tolerate before these symptoms began?",
+      "domain": "functional_status",
+      "priority": "medium"
+    }
+  ],
+  "red_flag_questions": [
+    {
+      "question": "Does the chest pain radiate to your left arm or jaw?",
+      "domain": "cardiac_ischemia",
+      "reason": "Radiation of chest pain to the left arm or jaw is a classic sign of myocardial ischemia and possible acute coronary syndrome, requiring immediate evaluation."
+    },
+    {
+      "question": "Do you experience shortness of breath with exertion or at rest?",
+      "domain": "cardiac_decompensation",
+      "reason": "Exertional dyspnea in the setting of chest pain suggests significant cardiac ischemia or developing heart failure, indicating reduced cardiac output."
+    },
+    {
+      "question": "Have you had episodes of heavy sweating associated with the chest pain?",
+      "domain": "autonomic_response",
+      "reason": "Diaphoresis accompanying chest pain is a sign of significant sympathetic activation often seen in acute myocardial infarction, indicating a potentially life-threatening event."
+    },
+    {
+      "question": "Is the pain occurring more frequently or with less exertion than before?",
+      "domain": "unstable_angina",
+      "reason": "Progressive angina with decreasing threshold of exertion suggests unstable angina, a condition that can rapidly progress to myocardial infarction."
+    },
+    {
+      "question": "Have you experienced chest pain at rest, especially at night?",
+      "domain": "acute_coronary_syndrome",
+      "reason": "Rest pain indicates unstable angina or impending myocardial infarction, requiring emergent cardiac evaluation and intervention."
+    }
+  ],
+  "expected_domains": [
+    "symptom_characterization",
+    "associated_symptoms",
+    "cardiovascular_risk_factors",
+    "family_history",
+    "medical_history",
+    "medications",
+    "symptom_progression",
+    "functional_status",
+    "prior_workup"
+  ],
+  "expected_consult": {
+    "specialty": "Cardiology",
+    "urgency": "urgent",
+    "reasoning": "A 55-year-old diabetic male with exertional chest pain radiating to the arm and jaw, associated diaphoresis, and progressive exertional dyspnea has a high pre-test probability for significant coronary artery disease. Urgent cardiology consultation is needed for risk stratification, stress testing or coronary angiography, and initiation of appropriate medical therapy."
+  }
+}

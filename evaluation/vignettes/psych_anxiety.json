@@ -1,0 +1,162 @@
+{
+  "id": "psych_anxiety_008",
+  "specialty": "Psychiatry",
+  "title": "Panic Attacks with Palpitations and Sleep Disturbance in a Young Female",
+  "dialogue": [
+    {
+      "speaker": "doctor",
+      "text": "Hi, Ms. Taylor. I see you've been experiencing anxiety and panic attacks. Can you describe what happens during one of these episodes?"
+    },
+    {
+      "speaker": "patient",
+      "text": "They come out of nowhere. My heart starts pounding really fast, I get this tightness in my chest, and I feel like I can't breathe. My hands go numb and tingly, I start sweating, and I feel like I'm going to die or go crazy. They last about 10 to 20 minutes. I've been having them two to three times a week for the past two months."
+    },
+    {
+      "speaker": "doctor",
+      "text": "That sounds really distressing. How have these episodes affected your daily life and sleep?"
+    },
+    {
+      "speaker": "patient",
+      "text": "It's ruining my life, honestly. I've stopped going out with friends because I'm terrified of having an attack in public. I called in sick to work four times last month. And I can't sleep. I lie in bed with my mind racing, and even when I do fall asleep, I wake up at 3 a.m. with my heart pounding. I'm getting maybe four hours of sleep a night. I'm exhausted."
+    },
+    {
+      "speaker": "doctor",
+      "text": "I'm sorry you're going through this. I need to ask some important questions. With everything feeling so overwhelming, have you had any thoughts of hurting yourself or not wanting to be alive?"
+    },
+    {
+      "speaker": "patient",
+      "text": "I've had some dark thoughts. Not like a plan or anything, but sometimes I think everyone would be better off without me, or I wish I could just disappear. Last week I thought about what it would be like if I just didn't wake up. But I wouldn't do anything. I have a younger sister who depends on me."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Thank you for being honest with me, that takes courage. I want to ask about a couple more things. Are you using anything to cope with the anxiety, like alcohol, marijuana, or any other substances? And have you noticed any physical changes like weight changes, feeling hot or cold, or tremors?"
+    },
+    {
+      "speaker": "patient",
+      "text": "I've been having a glass or two of wine to try to calm down at night, and honestly some nights it's more like a bottle. It's the only thing that helps me sleep. A friend also gave me some of her Xanax and I've been taking that a few times a week. I haven't told anyone about that. Physically, I have been losing weight without trying, I feel hot all the time, and my hands shake. I figured it was all just from the anxiety."
+    }
+  ],
+  "gold_standard_questions": [
+    {
+      "question": "Can you describe what happens during a panic attack, including all physical and psychological symptoms?",
+      "domain": "symptom_characterization",
+      "priority": "critical"
+    },
+    {
+      "question": "How often are the panic attacks occurring, and how long do they last?",
+      "domain": "symptom_frequency",
+      "priority": "high"
+    },
+    {
+      "question": "Do the attacks come on without a clear trigger, or are there specific situations that provoke them?",
+      "domain": "trigger_assessment",
+      "priority": "high"
+    },
+    {
+      "question": "How is your sleep? Are you having difficulty falling asleep, staying asleep, or both?",
+      "domain": "sleep_assessment",
+      "priority": "high"
+    },
+    {
+      "question": "Have you had any thoughts of self-harm, suicide, or not wanting to be alive?",
+      "domain": "safety_assessment",
+      "priority": "critical"
+    },
+    {
+      "question": "If you have had suicidal thoughts, do you have a specific plan or access to means?",
+      "domain": "safety_assessment",
+      "priority": "critical"
+    },
+    {
+      "question": "Are you using alcohol, recreational drugs, or any unprescribed medications to cope?",
+      "domain": "substance_use",
+      "priority": "critical"
+    },
+    {
+      "question": "How much alcohol are you drinking per day or per week?",
+      "domain": "substance_use",
+      "priority": "critical"
+    },
+    {
+      "question": "Are you taking any benzodiazepines or other medications not prescribed to you?",
+      "domain": "substance_use",
+      "priority": "critical"
+    },
+    {
+      "question": "Have you noticed any unintentional weight loss, heat intolerance, tremors, or changes in your menstrual cycle?",
+      "domain": "thyroid_screening",
+      "priority": "high"
+    },
+    {
+      "question": "How have the panic attacks affected your ability to work, socialize, and carry out daily activities?",
+      "domain": "functional_impairment",
+      "priority": "high"
+    },
+    {
+      "question": "Do you have a personal or family history of anxiety, depression, or other mental health conditions?",
+      "domain": "psychiatric_history",
+      "priority": "high"
+    },
+    {
+      "question": "Have you been experiencing persistent low mood, loss of interest, or hopelessness in addition to anxiety?",
+      "domain": "depression_screening",
+      "priority": "high"
+    },
+    {
+      "question": "Have you ever sought treatment for anxiety or mental health before, such as therapy or medication?",
+      "domain": "treatment_history",
+      "priority": "medium"
+    },
+    {
+      "question": "How much caffeine do you consume daily?",
+      "domain": "contributing_factors",
+      "priority": "medium"
+    }
+  ],
+  "red_flag_questions": [
+    {
+      "question": "Have you had any thoughts of suicide, self-harm, or wishing you were dead?",
+      "domain": "suicidal_ideation",
+      "reason": "Active suicidal ideation, even without a specific plan, significantly increases the risk of suicide attempt, especially in the context of anxiety, sleep deprivation, and substance use. Immediate safety assessment and risk stratification are essential."
+    },
+    {
+      "question": "Are you using alcohol, benzodiazepines, or other substances to manage your symptoms, and how much?",
+      "domain": "substance_use_disorder",
+      "reason": "Self-medicating with escalating alcohol use and unprescribed benzodiazepines is a significant red flag for developing substance use disorder. Combined use of alcohol and benzodiazepines also carries risk of fatal respiratory depression, and both substances can paradoxically worsen anxiety and depression."
+    },
+    {
+      "question": "Have you noticed unexplained weight loss, feeling constantly hot, a racing heart even at rest, or hand tremors?",
+      "domain": "thyroid_dysfunction",
+      "reason": "Symptoms of weight loss, heat intolerance, tremor, and palpitations alongside anxiety symptoms may indicate hyperthyroidism, which can mimic or exacerbate panic disorder. Thyroid function must be checked to rule out an organic cause before attributing symptoms solely to a psychiatric condition."
+    },
+    {
+      "question": "Do you have access to firearms, large quantities of medication, or other potentially lethal means?",
+      "domain": "means_access",
+      "reason": "Access to lethal means is one of the strongest risk factors for completed suicide. Assessing and counseling on means restriction is a critical component of safety planning for any patient endorsing suicidal thoughts."
+    },
+    {
+      "question": "Do you have anyone you can call or be with when you are feeling at your worst?",
+      "domain": "support_system",
+      "reason": "Social isolation and lack of a support system increase suicide risk. Identifying available supports is essential for safety planning and determining whether the patient can be safely managed as an outpatient."
+    }
+  ],
+  "expected_domains": [
+    "symptom_characterization",
+    "symptom_frequency",
+    "trigger_assessment",
+    "sleep_assessment",
+    "safety_assessment",
+    "substance_use",
+    "thyroid_screening",
+    "functional_impairment",
+    "psychiatric_history",
+    "depression_screening",
+    "treatment_history",
+    "contributing_factors"
+  ],
+  "expected_consult": {
+    "specialty": "Psychiatry",
+    "urgency": "routine",
+    "reasoning": "A 28-year-old female with panic disorder, significant functional impairment, comorbid sleep disturbance, passive suicidal ideation, escalating alcohol use, unprescribed benzodiazepine use, and physical symptoms suggestive of possible hyperthyroidism warrants psychiatry referral. While not an immediate psychiatric emergency given the passive nature of ideation and protective factors, the combination of substance misuse, passive suicidal thoughts, and progressive functional decline necessitates timely psychiatric evaluation for proper diagnosis, safety planning, and pharmacological management. Thyroid function testing should also be ordered to rule out hyperthyroidism as a contributing or causative factor."
+  }
+}
